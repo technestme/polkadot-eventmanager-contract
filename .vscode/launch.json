@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "TEST",
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "hardhat",
+        "test",
+        "--no-compile",
+        "--config",
+        "./hardhat.config.ts",
+        "--network",
+        "testnet",
+        "${file}"
+      ]
+    },
+    {
+      "name": "SCRIPT",
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "hardhat",
+        "run",
+        "--no-compile",
+        "${file}"
+      ]
+    }
+  ]
+}
